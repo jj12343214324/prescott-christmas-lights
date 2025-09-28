@@ -25,15 +25,17 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white relative" style={{overflow: 'visible !important'}}>
       {/* Top bar */}
       <div className="bg-gradient-to-r from-red-700 via-red-600 to-red-800 text-white py-2">
-        <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm gap-1 sm:gap-0">
-          <span className="font-medium">Book Now & Save 20%!</span>
-          <a
-            href={`tel:${SITE_CONFIG.phone}`}
-            className="flex items-center gap-1 sm:gap-2 font-bold hover:text-green-200 transition-colors"
-          >
-            <Phone size={14} className="sm:w-4 sm:h-4" />
-            {phoneNumber}
-          </a>
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-2 text-xs sm:text-sm">
+            <span className="font-medium">🎄 2025 is booking up fast, book early and get 20% off!</span>
+            <a
+              href={`tel:${SITE_CONFIG.phone}`}
+              className="flex items-center gap-1 font-bold hover:text-green-200 transition-colors"
+            >
+              <Phone size={14} className="sm:w-4 sm:h-4" />
+              {phoneNumber}
+            </a>
+          </div>
         </div>
       </div>
 
