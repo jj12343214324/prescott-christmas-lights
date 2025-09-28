@@ -49,7 +49,7 @@ export async function POST(request: Request) {
       to: process.env.EMAIL_TO?.split(',') || ['delivered@resend.dev'],
       subject: `New Quote Request from ${name}`,
       html: emailHtml,
-      reply_to: email,
+      replyTo: email,
     });
 
     if (error) {
