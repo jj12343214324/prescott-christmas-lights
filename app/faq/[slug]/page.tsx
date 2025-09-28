@@ -122,7 +122,7 @@ export default function FAQPage({ params }: { params: { slug: string } }) {
                 {faq.category.charAt(0).toUpperCase() + faq.category.slice(1)}
               </span>
               <span>•</span>
-              <span>Updated {new Date().toLocaleDateString()}</span>
+              <span>Expert Answer</span>
             </div>
           </div>
         </div>

@@ -66,6 +66,7 @@ export const services: Service[] = [
     name: 'Custom Design & Consultation',
     slug: 'christmas-light-design-consultation',
     description: 'Work with our design experts to create a unique Christmas light display that perfectly complements your property. We consider architecture, landscaping, and your personal style to design a one-of-a-kind holiday showcase.',
+    image: '/images/property design lighting landscaping lighting.jpeg',
     features: [
       'On-site property assessment',
       '3D design visualization',
@@ -161,6 +162,7 @@ export const services: Service[] = [
     name: 'Tree Wrapping & Lighting',
     slug: 'tree-wrapping-christmas-lights',
     description: 'Bring your landscape to life with professional tree lighting. We expertly wrap trunks and branches to create stunning illuminated trees that serve as focal points for your holiday display.',
+    image: '/images/property design lighting landscaping lighting with wrapped trees.jpeg',
     features: [
       'Professional trunk wrapping technique',
       'Branch and canopy lighting',

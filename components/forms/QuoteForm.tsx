@@ -29,7 +29,7 @@ export default function QuoteForm() {
     };
 
     try {
-      const response = await fetch('/api/quote', {
+      const response = await fetch('/api/send-quote', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,17 +52,17 @@ export default function QuoteForm() {
   if (isSubmitted) {
     return (
       <div className="text-center py-8">
-        <CheckCircle className="text-[#0d6936] mx-auto mb-4" size={64} />
+        <CheckCircle className="text-green-600 mx-auto mb-4" size={64} />
         <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
         <p className="text-gray-700 mb-6">
           We'll contact you within 30 minutes with your free quote!
         </p>
-        <p className="text-lg font-semibold text-[#0d6936]">
+        <p className="text-lg font-semibold text-green-700">
           Or call us now for immediate service:
         </p>
         <a
           href={`tel:${SITE_CONFIG.phone}`}
-          className="inline-flex items-center gap-2 text-2xl font-bold text-[#dc2027] mt-2 hover:underline"
+          className="inline-flex items-center gap-2 text-2xl font-bold text-red-600 mt-2 hover:underline"
         >
           <Phone size={24} />
           {formatPhone(SITE_CONFIG.phone)}
@@ -141,16 +141,19 @@ export default function QuoteForm() {
       </button>
 
       {/* Or Call */}
-      <div className="text-center mt-6 py-4 border-t border-gray-200">
-        <p className="text-gray-600 mb-2">Or call us right now:</p>
+      <div className="text-center mt-8 py-6 bg-gray-50 rounded-lg">
+        <p className="text-gray-600 mb-3 text-lg">Or call us right now:</p>
         <a
           href={`tel:${SITE_CONFIG.phone}`}
-          className="inline-flex items-center gap-2 text-2xl font-bold text-[#0d6936] hover:underline"
+          className="inline-flex items-center gap-2 text-3xl font-bold text-green-700 hover:text-green-800 transition-colors"
         >
-          <Phone size={28} />
+          <Phone size={32} />
           {formatPhone(SITE_CONFIG.phone)}
         </a>
-        <p className="text-sm text-[#dc2027] font-semibold mt-2">We're Open!</p>
+        <p className="text-base text-green-600 font-semibold mt-3">
+          <span className="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></span>
+          We're Open!
+        </p>
       </div>
     </form>
   );

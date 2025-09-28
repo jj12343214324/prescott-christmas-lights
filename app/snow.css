@@ -1,0 +1,31 @@
+@keyframes fall {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(100vh + 100px)) translateX(30px);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.snow {
+  position: absolute;
+  color: white;
+  user-select: none;
+  pointer-events: none;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+.light-blink-red {
+  animation: blink 2s ease-in-out infinite;
+}
+
+.light-blink-green {
+  animation: blink 2s ease-in-out infinite;
+  animation-delay: 1s;
+}

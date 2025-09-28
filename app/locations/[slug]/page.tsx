@@ -111,8 +111,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
               <div className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="font-semibold text-xl mb-3 text-green-700">Fast Response</h3>
                 <p className="text-gray-700">
-                  Based locally in {location.county} County, we provide quick service to {location.name}
-                  with same-week installations available during the season.
+                  Based locally in {location.county} County, we provide quick service to {location.name} with same-week installations available during the season.
                 </p>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg">
@@ -155,12 +154,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                     {service.name}
                   </h3>
                   <p className="text-gray-600 mb-4 line-clamp-2">{service.description}</p>
-                  <div className="flex items-center justify-between">
-                    {service.price && (
-                      <span className="text-green-700 font-semibold">{service.price}</span>
-                    )}
-                    <span className="text-green-600 font-medium">Learn More →</span>
-                  </div>
+                  <span className="text-green-600 font-medium">Learn More →</span>
                 </Link>
               ))}
             </div>
@@ -200,8 +194,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
             </h2>
             <p className="text-gray-700 mb-6">
               When it comes to Christmas light installation in {location.name}, we're the trusted local experts.
-              Our team has been serving {location.county} County for over 10 years, bringing holiday magic to
-              thousands of homes just like yours.
+              Our team brings holiday magic to thousands of homes just like yours throughout {location.county} County.
             </p>
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
               Custom Designs for {location.name} Properties
@@ -217,8 +210,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
             </h3>
             <p className="text-gray-700 mb-6">
               Our professional installers are trained in the latest safety protocols.
-              We use commercial-grade LED lights and secure mounting systems designed to withstand
-              {location.name}'s weather conditions. Most installations are completed in just a few hours,
+              We use commercial-grade LED lights and secure mounting systems designed to withstand {location.name}'s weather conditions. Most installations are completed in just a few hours,
               minimizing disruption to your daily routine.
             </p>
             {location.zipCode && (
@@ -270,7 +262,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
                 Get Your Free {location.name} Quote Today
               </h2>
               <p className="text-xl text-green-100">
-                Professional Christmas light installation starting at $599.
+                Professional Christmas light installation.
                 Fill out the form or call {formatPhone(SITE_CONFIG.phone)}!
               </p>
             </div>

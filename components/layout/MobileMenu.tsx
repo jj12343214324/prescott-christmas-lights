@@ -21,10 +21,10 @@ export default function MobileMenu() {
   }, [isOpen]);
 
   return (
-    <div className="lg:hidden">
+    <div className="lg:hidden relative z-30">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 text-gray-700 hover:text-green-700 transition-colors"
+        className="p-2 text-gray-700 hover:text-green-700 transition-colors relative z-30"
         aria-label="Toggle menu"
       >
         {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -33,7 +33,7 @@ export default function MobileMenu() {
       {/* Mobile menu overlay with smooth animation */}
       {isVisible && (
         <div
-          className={`fixed inset-0 top-[168px] z-40 bg-white transition-all duration-300 ease-in-out transform overflow-hidden ${
+          className={`fixed inset-0 top-[120px] z-40 bg-white transition-all duration-300 ease-in-out transform overflow-hidden ${
             isOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
           }`}
         >
@@ -44,7 +44,14 @@ export default function MobileMenu() {
                 className="text-lg font-medium text-gray-700 hover:text-green-700 py-2 border-b"
                 onClick={() => setIsOpen(false)}
               >
-                Services
+                Residential
+              </Link>
+              <Link
+                href="/commercial"
+                className="text-lg font-medium text-gray-700 hover:text-green-700 py-2 border-b"
+                onClick={() => setIsOpen(false)}
+              >
+                Commercial
               </Link>
               <Link
                 href="/locations"

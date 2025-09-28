@@ -67,7 +67,7 @@ export default function FloatingCTA() {
                   </div>
 
                   <p className="text-sm text-green-50">
-                    Get your FREE quote in 60 seconds!
+                    Get your FREE quote in 2 minutes!
                   </p>
                 </div>
 

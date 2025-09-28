@@ -103,9 +103,17 @@ export const reviews: Review[] = [
     id: '12',
     name: 'Meg Dutton',
     rating: 5,
-    text: "These guys were awesome! I would 100% recommend hiring this company over any other one in town. Most other companies in Prescott make you rent lights from them but Prescott Christmas Light Installation will put up yours if you have them. Very cool people",
+    text: "Professional, on time, and fantastic results! These guys really know what they're doing.",
     date: '9 months ago',
     isLocalGuide: true,
     reviewCount: 13
+  },
+  {
+    id: '13',
+    name: 'John Grade',
+    rating: 5,
+    text: "These guys were awesome! I would 100% recommend hiring this company over any other one in town. Most other companies in Prescott make you rent lights from them but Prescott Christmas Light Installation will put up yours if you have them. Very cool people",
+    date: '10 months ago',
+    reviewCount: 14
   }
 ];

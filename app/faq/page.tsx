@@ -42,10 +42,10 @@ export default function FAQPage() {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-800 to-green-900 text-white py-20 mt-20">
+      <section className="bg-gradient-to-br from-green-800 to-green-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Frequently Asked Questions
             </h1>
             <p className="text-xl text-green-100 mb-8">
@@ -84,11 +84,11 @@ export default function FAQPage() {
                   <a
                     key={category.id}
                     href={`#${category.id}`}
-                    className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center"
+                    className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all hover:scale-105 text-center group"
                   >
-                    <div className="text-3xl mb-2">{category.icon}</div>
-                    <h3 className="font-semibold text-gray-900">{category.name}</h3>
-                    <p className="text-sm text-gray-600 mt-1">
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{category.icon}</div>
+                    <h3 className="font-semibold text-gray-900 text-lg">{category.name}</h3>
+                    <p className="text-sm text-gray-600 mt-2">
                       {categoryFAQs.length} questions
                     </p>
                   </a>
@@ -100,7 +100,7 @@ export default function FAQPage() {
       </section>
 
       {/* Main FAQ Content */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {categories.map((category) => {
@@ -108,14 +108,17 @@ export default function FAQPage() {
               if (categoryFAQs.length === 0) return null;
 
               return (
-                <div key={category.id} id={category.id} className="mb-16 scroll-mt-24">
-                  <div className="flex items-center mb-8">
-                    <span className="text-3xl mr-3">{category.icon}</span>
-                    <h2 className="text-3xl font-bold text-gray-900">
-                      {category.name}
-                    </h2>
+                <div key={category.id} id={category.id} className="mb-20 scroll-mt-24">
+                  <div className="flex items-center mb-10 pb-4 border-b-2 border-green-100">
+                    <span className="text-4xl mr-4 bg-green-100 p-3 rounded-xl">{category.icon}</span>
+                    <div>
+                      <h2 className="text-3xl font-bold text-gray-900">
+                        {category.name}
+                      </h2>
+                      <p className="text-gray-600 mt-1">{categoryFAQs.length} common questions</p>
+                    </div>
                   </div>
-                  <div className="space-y-4">
+                  <div className="space-y-5">
                     {categoryFAQs.map((faq) => (
                       <FAQItem key={faq.id} faq={faq} />
                     ))}

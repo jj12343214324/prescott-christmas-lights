@@ -41,29 +41,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
     notFound();
   }
 
-  const structuredData = generateStructuredData('Service', {
-    name: service.name,
-    description: service.description,
-    provider: {
-      '@type': 'LocalBusiness',
-      name: SITE_CONFIG.name,
-      telephone: SITE_CONFIG.phone,
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Prescott',
-        addressRegion: 'AZ',
-      },
-    },
-    areaServed: locations.map(loc => ({
-      '@type': 'City',
-      name: loc.name,
-    })),
-    offers: service.price ? {
-      '@type': 'Offer',
-      price: service.price,
-      priceCurrency: 'USD',
-    } : undefined,
-  });
+  const structuredData = generateStructuredData(service, `/services/${service.slug}`);
 
   const relatedServices = services.filter(s => s.id !== service.id).slice(0, 3);
 
@@ -105,6 +83,21 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </section>
+
+      {/* Image Section */}
+      {service.image && (
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <img
+                src={service.image}
+                alt={service.name}
+                className="w-full h-auto rounded-lg shadow-xl"
+              />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Features Section */}
       <section className="py-16 bg-white">
@@ -213,7 +206,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                 Get Your Free {service.name} Quote
               </h2>
               <p className="text-xl text-green-100">
-                Fill out the form below or call {formatPhone(SITE_CONFIG.phone)}
+                Fill out the form below or call <a href={`tel:${SITE_CONFIG.phone}`} className="underline hover:text-white">{formatPhone(SITE_CONFIG.phone)}</a>
               </p>
             </div>
             <QuoteForm />
