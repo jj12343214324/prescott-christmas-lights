@@ -5,7 +5,6 @@ export interface Service {
   description: string;
   features: string[];
   benefits: string[];
-  price?: string;
   image?: string;
   popular?: boolean;
 }
@@ -33,7 +32,6 @@ export const services: Service[] = [
       'Stress-free holiday decorating',
       'Professional service throughout'
     ],
-    price: 'Starting at $599',
     popular: true
   },
   {
@@ -59,7 +57,6 @@ export const services: Service[] = [
       'Consistent, professional appearance',
       'Tax-deductible business expense'
     ],
-    price: 'Custom quotes available'
   },
   {
     id: 'design-consultation',
@@ -85,7 +82,6 @@ export const services: Service[] = [
       'Professional expertise and ideas',
       'Avoid common design mistakes'
     ],
-    price: 'Free with installation'
   },
   {
     id: 'installation-only',
@@ -109,7 +105,6 @@ export const services: Service[] = [
       'Proper electrical connections',
       'Peace of mind'
     ],
-    price: 'Starting at $399'
   },
   {
     id: 'removal',
@@ -131,7 +126,6 @@ export const services: Service[] = [
       'Property protection',
       'Time-saving convenience'
     ],
-    price: 'Included in full service'
   },
   {
     id: 'maintenance',
@@ -155,7 +149,6 @@ export const services: Service[] = [
       'Peace of mind',
       'Professional support all season'
     ],
-    price: 'Starting at $99/month'
   },
   {
     id: 'tree-lighting',
@@ -181,7 +174,6 @@ export const services: Service[] = [
       'Highlights landscape features',
       'Professional, even coverage'
     ],
-    price: 'Starting at $199/tree',
     popular: true
   },
   {
@@ -208,7 +200,6 @@ export const services: Service[] = [
       'No annual installation fees',
       'Modern smart home integration'
     ],
-    price: 'Custom quotes available'
   }
 ];
 

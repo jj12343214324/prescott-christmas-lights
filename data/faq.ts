@@ -13,7 +13,7 @@ export const faqs: FAQ[] = [
   {
     id: 'cost-factors',
     question: 'How much does professional Christmas light installation cost in Prescott?',
-    answer: 'Professional Christmas light installation in Prescott typically ranges from $300 to $3,000+ depending on home size, design complexity, and light type. Most average-sized homes (1,500-2,500 sq ft) invest between $800-$1,500 for a beautiful display. We provide free estimates tailored to your specific property and vision.',
+    answer: 'The cost of professional Christmas light installation varies based on home size, design complexity, and light type. Every property is unique, so we provide free custom estimates tailored to your specific property and vision. Contact us for a personalized quote.',
     category: 'pricing',
     slug: 'christmas-light-installation-cost-prescott',
     metaDescription: 'Learn about Christmas light installation costs in Prescott, AZ. Get pricing information and factors that affect installation prices.',
@@ -22,7 +22,7 @@ export const faqs: FAQ[] = [
   {
     id: 'price-per-foot',
     question: 'What is the price per foot for Christmas light installation?',
-    answer: 'Christmas light installation typically costs between $3-$8 per linear foot, including lights, installation, and removal. Premium LED lights and complex rooflines may increase the per-foot cost. Commercial-grade LED lights with professional installation average $4-$6 per foot for most residential properties.',
+    answer: 'Our pricing is customized based on your specific project needs, including the type of lights, roofline complexity, and design requirements. We provide free detailed estimates that break down all costs for your specific property. Contact us for a personalized quote.',
     category: 'pricing',
     slug: 'christmas-light-price-per-foot',
     metaDescription: 'Understand Christmas light installation pricing per foot in Prescott. Compare costs for different light types and installation options.',

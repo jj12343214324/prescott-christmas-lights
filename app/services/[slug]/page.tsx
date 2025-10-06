@@ -63,9 +63,6 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             )}
             <h1 className="text-4xl md:text-5xl font-bold mb-6">{service.name}</h1>
             <p className="text-xl text-green-100 mb-8">{service.description}</p>
-            {service.price && (
-              <div className="text-3xl font-bold text-yellow-400 mb-8">{service.price}</div>
-            )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#quote"
@@ -186,9 +183,6 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                 >
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{relatedService.name}</h3>
                   <p className="text-gray-600 text-sm line-clamp-3">{relatedService.description}</p>
-                  {relatedService.price && (
-                    <p className="text-green-700 font-semibold mt-3">{relatedService.price}</p>
-                  )}
                   <span className="text-green-600 font-medium text-sm mt-3 inline-block">Learn More →</span>
                 </Link>
               ))}
