@@ -78,7 +78,8 @@ export default function PhotoShowcase() {
               {/* Large featured image */}
               <div className="col-span-2 relative h-64 rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="/images/Roof line at night nice house christmas lighting.png"
+                
+                  src="/images/chino christmas lights after.jpeg"
                   alt="Beautiful Christmas lights on roofline"
                   fill
                   className="object-cover"
@@ -93,7 +94,7 @@ export default function PhotoShowcase() {
               {/* Smaller images */}
               <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/chino christmas lights after.jpeg"
+                  src="/images/Roof line at night nice house christmas lighting.png"
                   alt="Christmas light installation"
                   fill
                   className="object-cover"
