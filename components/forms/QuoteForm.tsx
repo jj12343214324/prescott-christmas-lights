@@ -35,11 +35,14 @@ export default function QuoteForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
+        redirect: 'follow',
       });
 
       if (response.ok) {
         setIsSubmitted(true);
       } else {
+        const errorData = await response.text();
+        console.error('Form submission error:', response.status, errorData);
         throw new Error('Failed to submit quote request');
       }
     } catch (err) {
