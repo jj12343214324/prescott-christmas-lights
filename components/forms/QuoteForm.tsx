@@ -9,13 +9,44 @@ export default function QuoteForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [fieldErrors, setFieldErrors] = useState<{[key: string]: string}>({});
+
+  const validateForm = (formData: FormData) => {
+    const errors: {[key: string]: string} = {};
+    const email = formData.get('email') as string;
+    const phone = formData.get('phone') as string;
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+      errors.email = 'Please enter a valid email address (e.g., name@example.com)';
+    }
+
+    // Phone validation
+    const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if (!phone || !phoneRegex.test(phone.replace(/\s/g, ''))) {
+      errors.phone = 'Please enter a valid 10-digit phone number';
+    }
+
+    return errors;
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
+    setFieldErrors({});
 
     const formData = new FormData(e.currentTarget);
+
+    // Validate form
+    const errors = validateForm(formData);
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      setIsSubmitting(false);
+      return;
+    }
+
     const data = {
       name: formData.get('name'),
       email: formData.get('email'),
@@ -88,22 +119,40 @@ export default function QuoteForm() {
         />
 
         {/* Phone */}
-        <input
-          type="tel"
-          name="phone"
-          required
-          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0d6936] focus:border-[#0d6936] text-lg text-gray-900 bg-white placeholder:text-gray-500"
-          placeholder="Phone Number *"
-        />
+        <div>
+          <input
+            type="tel"
+            name="phone"
+            required
+            className={`w-full px-4 py-3 border-2 rounded-lg focus:ring-2 text-lg text-gray-900 bg-white placeholder:text-gray-500 ${
+              fieldErrors.phone
+                ? 'border-red-500 focus:ring-red-500 focus:border-red-500'
+                : 'border-gray-200 focus:ring-[#0d6936] focus:border-[#0d6936]'
+            }`}
+            placeholder="Phone Number *"
+          />
+          {fieldErrors.phone && (
+            <p className="mt-1 text-sm text-red-600">{fieldErrors.phone}</p>
+          )}
+        </div>
 
         {/* Email */}
-        <input
-          type="email"
-          name="email"
-          required
-          className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0d6936] focus:border-[#0d6936] text-lg text-gray-900 bg-white placeholder:text-gray-500"
-          placeholder="Email *"
-        />
+        <div>
+          <input
+            type="email"
+            name="email"
+            required
+            className={`w-full px-4 py-3 border-2 rounded-lg focus:ring-2 text-lg text-gray-900 bg-white placeholder:text-gray-500 ${
+              fieldErrors.email
+                ? 'border-red-500 focus:ring-red-500 focus:border-red-500'
+                : 'border-gray-200 focus:ring-[#0d6936] focus:border-[#0d6936]'
+            }`}
+            placeholder="Email *"
+          />
+          {fieldErrors.email && (
+            <p className="mt-1 text-sm text-red-600">{fieldErrors.email}</p>
+          )}
+        </div>
 
         {/* Address */}
         <input
