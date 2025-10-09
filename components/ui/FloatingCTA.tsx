@@ -12,8 +12,24 @@ export default function FloatingCTA() {
   const phoneNumber = formatPhone(SITE_CONFIG.phone);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 3000);
-    return () => clearTimeout(timer);
+    // Show after user has scrolled or after 10 seconds to avoid intrusive interstitial policy
+    let scrolled = false;
+    const handleScroll = () => {
+      if (window.scrollY > 500 && !scrolled) {
+        scrolled = true;
+        setIsVisible(true);
+      }
+    };
+
+    const timer = setTimeout(() => {
+      if (!scrolled) setIsVisible(true);
+    }, 10000); // Increased from 3s to 10s
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (

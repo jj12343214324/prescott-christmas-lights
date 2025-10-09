@@ -191,8 +191,8 @@ export default function FAQPage({ params }: { params: { slug: string } }) {
                       the holiday season.
                     </li>
                     <li>
-                      <strong>Removal & Storage:</strong> After the holidays, we carefully remove
-                      and store your lights until next year.
+                      <strong>Removal & Packing:</strong> After the holidays, we carefully remove
+                      your lights and pack them in bins for you to store.
                     </li>
                   </ol>
                 </>

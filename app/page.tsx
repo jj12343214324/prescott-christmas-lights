@@ -35,7 +35,7 @@ export default function HomePage() {
               { icon: Star, text: '5-Star Reviews', subtext: '100+ Happy Families', color: 'text-yellow-500' },
               { icon: Award, text: 'Local Experts', subtext: 'Prescott Natives', color: 'text-red-600' },
               { icon: Clock, text: 'Fast Service', subtext: '48-Hour Install', color: 'text-green-600' },
-              { icon: Shield, text: '100% Satisfaction', subtext: 'Guaranteed', color: 'text-green-600' }
+              { icon: Shield, text: 'Professional Service', subtext: 'Quality Work', color: 'text-green-600' }
             ].map((item, index) => (
               <div key={index} className="text-center">
                 <div className="bg-white rounded-xl p-4 hover:shadow-md transition-shadow">
@@ -81,7 +81,7 @@ export default function HomePage() {
               {
                 title: 'We Install Everything',
                 description: 'Our professional team handles the entire installation. Usually within 48 hours!',
-                detail: 'Fully insured',
+                detail: 'Professional team',
                 Icon: Sparkles,
                 color: 'from-green-500 to-green-600'
               },
