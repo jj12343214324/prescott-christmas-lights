@@ -102,7 +102,7 @@ export default function Footer() {
               <h3 className="text-white font-bold text-lg mb-4">Contact Us</h3>
               <div className="space-y-4">
                 <div>
-                  <p className="text-gray-500 text-sm mb-1">Phone</p>
+                  <p className="text-gray-400 text-sm mb-1 font-medium">Phone</p>
                   <a
                     href={`tel:${SITE_CONFIG.phone}`}
                     className="text-white font-semibold hover:text-green-400 transition-colors"
@@ -111,11 +111,11 @@ export default function Footer() {
                   </a>
                 </div>
                 <div>
-                  <p className="text-gray-500 text-sm mb-1">Service Area</p>
+                  <p className="text-gray-400 text-sm mb-1 font-medium">Service Area</p>
                   <p className="text-white">Yavapai County, AZ</p>
                 </div>
                 <div>
-                  <p className="text-gray-500 text-sm mb-1">Business Hours</p>
+                  <p className="text-gray-400 text-sm mb-1 font-medium">Business Hours</p>
                   <p className="text-white">Mon-Fri: 8AM-6PM</p>
                   <p className="text-white">Sat: 9AM-5PM</p>
                 </div>
@@ -129,7 +129,7 @@ export default function Footer() {
       <div className="border-t border-gray-800 py-6">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-gray-500 mb-4 md:mb-0">
+            <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © {currentYear} {SITE_CONFIG.name}. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">

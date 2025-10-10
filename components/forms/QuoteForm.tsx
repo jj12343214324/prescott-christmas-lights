@@ -202,8 +202,8 @@ export default function QuoteForm() {
           <Phone size={32} />
           {formatPhone(SITE_CONFIG.phone)}
         </a>
-        <p className="text-base text-green-600 font-semibold mt-3">
-          <span className="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></span>
+        <p className="text-base text-green-700 font-bold mt-3">
+          <span className="inline-block w-2 h-2 bg-green-600 rounded-full animate-pulse mr-2"></span>
           We're Open!
         </p>
       </div>

@@ -87,7 +87,7 @@ export default function PhotoShowcase() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <p className="font-semibold">Roofline Lighting</p>
-                  <p className="text-sm opacity-90">Prescott Valley</p>
+                  <p className="text-sm text-white">Prescott Valley</p>
                 </div>
               </div>
 
@@ -128,11 +128,11 @@ export default function PhotoShowcase() {
                       ))}
                     </div>
                     <p className="font-bold text-lg">100% Satisfaction</p>
-                    <p className="text-sm opacity-90">From over 100 happy families</p>
+                    <p className="text-sm text-white">From over 100 happy families</p>
                   </div>
                   <div className="text-right">
                     <p className="text-3xl font-bold">5.0</p>
-                    <p className="text-xs opacity-90">Rating</p>
+                    <p className="text-xs text-white">Rating</p>
                   </div>
                 </div>
               </div>

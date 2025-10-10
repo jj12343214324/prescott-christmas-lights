@@ -170,7 +170,7 @@ export default function HomePage() {
           <div className="text-center">
             <Link
               href="/locations"
-              className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-bold"
+              className="inline-flex items-center gap-2 text-green-700 hover:text-green-800 font-bold"
             >
               View All Service Areas
               <ChevronRight className="w-5 h-5" />
@@ -239,7 +239,7 @@ export default function HomePage() {
           <div className="text-center mt-8">
             <Link
               href="/faq"
-              className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-bold"
+              className="inline-flex items-center gap-2 text-green-700 hover:text-green-800 font-bold"
             >
               View All FAQs
               <ChevronRight className="w-5 h-5" />
